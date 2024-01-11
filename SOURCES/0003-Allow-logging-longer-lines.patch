@@ -1,0 +1,12 @@
+diff -up a/nslcd/log.c b/nslcd/log.c
+--- a/nslcd/log.c.orig	2021-12-06 14:27:05.912471587 +0100
++++ b/nslcd/log.c	2021-12-06 14:27:35.541779753 +0100
+@@ -230,7 +230,7 @@ void log_log(int pri, const char *format
+ {
+   int res;
+   struct log_cfg *lst;
+-  char buffer[200];
++  char buffer[512];
+   va_list ap;
+ #ifndef TLS
+   char *sessionid, *requestid;
